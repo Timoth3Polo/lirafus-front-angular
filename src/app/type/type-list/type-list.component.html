@@ -1,0 +1,11 @@
+@if(typeList$ | async; as typeList) {
+    <div class="type-list-container">
+        @for(type of typeList; track type.name) {
+            <app-type-card [type]="type"/>
+        } @empty {
+            Ooops, there is an error.
+        }
+    </div>
+} @else {
+    Oops, there is an error.
+}

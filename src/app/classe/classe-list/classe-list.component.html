@@ -1,0 +1,13 @@
+@if(filteredClasseList$ ?? classeList$ | async; as classeList) {
+    <div class="classe-list-container">
+        @for(classe of classeList; track classe.name) {
+            <app-classe-card 
+                [classe]="classe" 
+            />
+        } @empty {
+            Ooops, there is an error.
+        }
+    </div>
+} @else {
+    Ooops, there is an error.
+}

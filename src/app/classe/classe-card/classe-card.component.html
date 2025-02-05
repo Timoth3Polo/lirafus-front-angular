@@ -1,0 +1,17 @@
+<div class="classe-card-container" (click)="loadClasseCard()">
+    <div class="classe-image-container">
+        <img [src]="classe.urlProfilePicture"/>
+    </div>
+    <div class="classe-card-name">
+        <b>{{ classe.name | uppercase }}</b>
+    </div>
+    <div class="classe-card-type-list">
+        @for(type of typeList; track type.name) {
+            <div class="classe-card-type">
+                <img [src]="type.urlPicture"/>
+            </div>
+        } @empty {
+            Ooops, there is an error.
+        }
+    </div>
+</div>

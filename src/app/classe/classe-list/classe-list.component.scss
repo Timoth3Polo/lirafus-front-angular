@@ -1,0 +1,61 @@
+/*                   TEMPLATE                   */
+/* 1 | Propriétés de positionnement             */
+/* 2 | Propriétés de boîte                      */
+/* 3 | Propriétés de bordures et d'arrière-plan */
+/* 4 | Propriétés typographiques                */
+/* 5 | Autres                                   */
+/* 6 | Pseudo-classes                           */
+
+.classe-list-container {
+    /* 1 | Propriétés de positionnement */
+    display: grid;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* 2 | Propriétés de boîte */
+    gap: 4vw;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+
+    /* Responsive Styles */
+    @media (max-width: 1300px) {
+        /* 2 | Propriétés de boîte */
+        gap: 3vw;
+        grid-template-columns: 25vw 25vw 25vw;
+    }
+
+    @media (max-width: 1200px) {
+        /* 2 | Propriétés de boîte */
+        gap: 3vw;
+        grid-template-columns: 25vw 25vw 25vw;
+    }
+
+    @media (max-width: 992px) {
+        /* 2 | Propriétés de boîte */
+        gap: 2vw;
+        grid-template-columns: 33vw 33vw;
+
+        /* 1 | Propriétés de positionnement */
+        margin-top: 4vh;
+    }
+
+    @media (max-width: 768px) {
+        /* 2 | Propriétés de boîte */
+        gap: 2vh;
+        grid-template-columns: 45vw 45vw;
+
+        /* 1 | Propriétés de positionnement */
+        margin-top: 3vh;
+    }
+
+    @media (max-width: 480px) {
+        /* 2 | Propriétés de boîte */
+        gap: 3vh;
+        grid-template-columns: 90vw;
+
+        /* 1 | Propriétés de positionnement */
+        margin-top: 2vh;
+    }
+}

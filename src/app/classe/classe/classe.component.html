@@ -1,0 +1,41 @@
+@if(classe$ | async; as classe) {
+    <div class="classe-container"
+        [ngStyle]="{'background-image': isSmallScreen ? 'none' : 'url(' + classe.urlBackgroundPicture + ')'}">
+        
+        <div class="classe-information-container">
+            <div class="classe-information">
+                <h1>{{ classe.nickname1 }}</h1>
+                <h2 style="color:gold;">{{ classe.nickname2 }}</h2>
+                <br/>
+                @for(overview of overviews; track overview) {
+                    <p style="color:#ffffff;">{{ overview }}</p>
+                }
+                <div class="classe-type-container">
+                    @if(typeList$ | async; as typeList) {
+                        @for(type of typeList; track type.name) {
+                            <div class="type" (click)="onSelectType(type)">
+                                <img [src]="type.urlPicture" alt="{{ type.name }}"/>
+                                <b>{{ type.name | uppercase }}</b>
+                            </div>
+                        } @empty {
+                            <p class="error-message">Aucun type disponible.</p>
+                        }
+                    } @else {
+                        <p class="error-message">Impossible de charger les types.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="classe-character-container">
+            <img class="classe-character-picture"
+                [src]="classe.urlCharacterPicture || '/assets/default-character.png'"
+                alt="Personnage de {{ classe.nickname1 }}"/>
+        </div>
+
+    </div>
+} @else {
+    <div class="error-message">
+        <p>Impossible de charger la classe.</p>
+    </div>
+}

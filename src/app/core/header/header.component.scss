@@ -1,0 +1,72 @@
+/*                   TEMPLATE                   */
+/* 1 | Propriétés de positionnement             */
+/* 2 | Propriétés de boîte                      */
+/* 3 | Propriétés de bordures et d'arrière-plan */
+/* 4 | Propriétés typographiques                */
+/* 5 | Autres                                   */
+/* 6 | Pseudo-classes                           */
+
+header {
+    /* 1 | Propriétés de positionnement */
+    position: fixed;
+    z-index: 100;
+
+    /* 2 | Propriétés de boîte */
+    height: 7vh;
+    width: 80vw;
+
+    /* 3 | Propriétés de bordures et d'arrière-plan */
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    margin-left: 10vw;
+    margin-top: 2vh;
+    padding-left: 1.5vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+
+    /* 4 | Propriétés typographiques */
+    color: white;
+    font-size: 30px;
+
+    /* 5 | Autres */
+    opacity: 0.9;
+    cursor: pointer;
+
+    /* 6 | Pseudo-classes */
+    &:hover {
+        /* 3 | Propriétés de bordures et d'arrière-plan */
+        background-color: rgb(76, 76, 76);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+        /* 4 | Propriétés typographiques */
+        font-size: 28px;
+    }
+
+    @media (max-width: 992px) {
+        /* 4 | Propriétés typographiques */
+        font-size: 26px;
+    }
+
+    @media (max-width: 768px) {
+        /* 1 | Propriétés de positionnement */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* 4 | Propriétés typographiques */
+        font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+        /* 2 | Propriétés de boîte */
+        height: 7vh;
+
+        /* 3 | Propriétés de bordures et d'arrière-plan */
+        padding-left: 0;
+
+        /* 4 | Propriétés typographiques */
+        font-size: 22px;
+    }
+}

@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/*                   TEMPLATE                   */
+/* 1 | Propriétés de positionnement             */
+/* 2 | Propriétés de boîte                      */
+/* 3 | Propriétés de bordures et d'arrière-plan */
+/* 4 | Propriétés typographiques                */
+/* 5 | Autres                                   */
+/* 6 | Pseudo-classes                           */
+
+* {
+    /* 2 | Propriétés de boîte */
+    box-sizing: border-box;
+
+    /* 3 | Propriétés de bordures et d'arrière-plan */
+    margin: 0;
+    padding: 0;
+
+    /* 4 | Propriétés typographiques */
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+body {
+    /* 2 | Propriétés de boîte */
+    background-color: #9DB2BF;
+
+    /* 3 | Propriétés de bordures et d'arrière-plan */
+    margin: 0;
+}

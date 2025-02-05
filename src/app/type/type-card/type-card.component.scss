@@ -1,0 +1,119 @@
+/*                   TEMPLATE                   */
+/* 1 | Propriétés de positionnement             */
+/* 2 | Propriétés de boîte                      */
+/* 3 | Propriétés de bordures et d'arrière-plan */
+/* 4 | Propriétés typographiques                */
+/* 5 | Autres                                   */
+/* 6 | Pseudo-classes                           */
+
+.type-card-container {
+    /* 1 | Propriétés de positionnement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* 2 | Propriétés de boîte */
+    height: 10vh;
+    width: 10vw;
+
+    /* 3 | Propriétés de bordures et d'arrière-plan */
+    color: white;
+    
+    /* 4 | Propriétés typographiques */
+    font-size: 17px;
+    transition: all 0.3s ease;
+
+    /* 5 | Autres */
+    cursor: pointer;
+
+    img {
+        /* 2 | Propriétés de boîte */
+        height: 8vh;
+        width: 8vw;
+    }
+
+    b {
+        /* 3 | Propriétés de bordures et d'arrière-plan */
+        margin-top: 2vh;
+    }
+
+    /* 6 | Pseudo-classes */
+    &:hover {
+        /* 4 | Propriétés typographiques */
+        transform: scale(1.10);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 1300px) {
+        /* 2 | Propriétés de boîte */
+        height: 12vh;
+        width: 12vw;
+ 
+        img {
+            height: 7vh;
+            width: 7vw;
+        }
+ 
+        /* 4 | Propriétés typographiques */
+        font-size: 15px;
+    }
+
+    @media (max-width: 1200px) {
+        /* 2 | Propriétés de boîte */
+        height: 14vh;
+        width: 14vw;
+
+        img {
+            height: 7vh;
+            width: 7vw;
+
+        }
+
+        /* 4 | Propriétés typographiques */
+        font-size: 20px;
+    }
+
+    @media (max-width: 992px) {
+        /* 2 | Propriétés de boîte */
+        height: 20vh;
+        width: 20vw;
+
+        img {
+            height: 11vh;
+            width: 11vw;
+        }
+
+        /* 4 | Propriétés typographiques */
+        font-size: 22px;
+    }
+
+    @media (max-width: 768px) {
+        /* 2 | Propriétés de boîte */
+        height: 18vh;
+        width: 26vw;
+
+        img {
+            height: 14vh;
+            width: 14vw;
+        }
+
+        /* 4 | Propriétés typographiques */
+        font-size: 24px;
+    }
+
+    @media (max-width: 480px) {
+        /* 2 | Propriétés de boîte */
+        height: 20vh;
+        width: 40vw;
+
+        img {
+            height: 18vh;
+            width: 18vw;
+        }
+
+        /* 4 | Propriétés typographiques */
+        font-size: 18px;
+    }
+}

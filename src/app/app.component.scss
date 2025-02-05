@@ -1,0 +1,21 @@
+/*                   TEMPLATE                   */
+/* 1 | Propriétés de positionnement             */
+/* 2 | Propriétés de boîte                      */
+/* 3 | Propriétés de bordures et d'arrière-plan */
+/* 4 | Propriétés typographiques                */
+/* 5 | Autres                                   */
+/* 6 | Pseudo-classes                           */
+
+.app-wrapper {
+    /* 1 | Propriétés de positionnement */
+    display: flex;
+    flex-direction: column;
+
+    /* 3 | Propriétés de bordures et d'arrière-plan */
+    min-height: 100vh;
+}
+
+.app-content {
+    /* 1 | Propriétés de positionnement */
+    flex: 1;
+}
